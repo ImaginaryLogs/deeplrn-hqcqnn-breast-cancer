@@ -1,0 +1,15 @@
+
+# Hyperpameters and configs to choose from
+
+seed: 42
+
+training:
+  split:
+    train_split: 0.70
+    validation_split: 0.15
+
+# quantum_kenrel:
+
+# classical_backbone:
+
+# quantum_vqc:
