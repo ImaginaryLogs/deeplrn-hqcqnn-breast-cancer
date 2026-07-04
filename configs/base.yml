@@ -2,6 +2,7 @@
 # Hyperpameters and configs to choose from
 
 seed: 42
+target_size: 32
 
 training:
   split:
