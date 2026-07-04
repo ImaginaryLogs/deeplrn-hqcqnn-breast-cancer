@@ -1,16 +1,17 @@
-
-# Hyperpameters and configs to choose from
-
+# Shared hyperparameters and experimental configuration
 seed: 42
 target_size: 32
 
 training:
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  ansatz_reps: 2
   split:
     train_split: 0.70
     validation_split: 0.15
 
-# quantum_kenrel:
-
-# classical_backbone:
-
-# quantum_vqc:
+# Default experimental conditions (used for baseline/control runs)
+defaults:
+  preprocessing: "naive"
+  middle_layer: "baseline"
