@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 from sklearn.model_selection import train_test_split
 from src.utils.yaml_config_reader import CONFIG
 
-from preprocessing import ResizeComp, load_dicom_pixels
+from src.qcqcnn.preprocessing import ResizeComp, load_dicom_pixels
 
 @dataclass
 class SplitIndices:

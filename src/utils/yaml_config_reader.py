@@ -11,6 +11,7 @@ class SplitConfig:
 @dataclass(frozen=True)
 class TrainingConfig:
     split: SplitConfig
+    batch_size: int
 
 
 @dataclass(frozen=True)
@@ -40,7 +41,8 @@ CONFIG: Final[GlobalConfig] = GlobalConfig(
     seed=raw_config["seed"],
     target_size=raw_config["target_size"],
     training=TrainingConfig(
-        split=SplitConfig(**raw_config["training"]["split"])
+        split=SplitConfig(**raw_config["training"]["split"]),
+        batch_size=raw_config["batch_size"]
     ),
     clahe=ClahePreprocessConfig(**raw_config["clahe"])
 )
